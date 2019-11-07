@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/pantallaPrincipal">
+
+    <fragment
+        android:id="@+id/pantallaPrincipal"
+        android:name="com.example.alumnos.PantallaPrincipal"
+        android:label="fragment_pantalla_principal"
+        tools:layout="@layout/fragment_pantalla_principal" >
+        <action
+            android:id="@+id/action_pantallaPrincipal_to_pantallaAlumno"
+            app:destination="@id/pantallaAlumno" />
+        <action
+            android:id="@+id/action_pantallaPrincipal_to_pantallaAlumnoCrear"
+            app:destination="@id/pantallaAlumnoCrear" />
+    </fragment>
+    <fragment
+        android:id="@+id/pantallaAlumno"
+        android:name="com.example.alumnos.PantallaAlumnoEditar"
+        android:label="fragment_pantalla_alumno"
+        tools:layout="@layout/fragment_pantalla_alumno_editar" >
+        <argument
+            android:name="nombre"
+            app:argType="string" />
+        <argument
+            android:name="apellidos"
+            app:argType="string" />
+        <argument android:name="notaMedia"
+            app:argType="string" />
+        <argument
+            android:name="numeroMatricula"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/pantallaAlumnoCrear"
+        android:name="com.example.alumnos.PantallaAlumnoCrear"
+        android:label="fragment_pantalla_alumno_crear"
+        tools:layout="@layout/fragment_pantalla_alumno_crear" />
+</navigation>

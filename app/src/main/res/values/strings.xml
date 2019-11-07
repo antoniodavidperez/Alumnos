@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Alumnos</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="numeroMatricula">Número de matrícula:</string>
+    <string name="nombre">Nombre:</string>
+    <string name="apellidos">Apellidos:</string>
+    <string name="notaMedia">Nota media:</string>
+</resources>
